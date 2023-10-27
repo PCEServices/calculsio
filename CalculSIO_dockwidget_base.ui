@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CalculsSIO</class>
+ <widget class="QWidget" name="CalculsSIO">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>302</width>
+    <height>461</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>302</width>
+    <height>461</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>602</width>
+    <height>461</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>CalculsSIO</string>
+  </property>
+  <widget class="QWidget" name="formLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>281</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="sroLabel">
+      <property name="text">
+       <string>SRO / NRO</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="sroLineEdit">
+      <property name="placeholderText">
+       <string>SRO-31-165-361</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>40</y>
+     <width>281</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="calculBoiteBouton">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Couches nécessaires : &lt;br&gt;- ftth&lt;br&gt;- ftte&lt;br&gt;- ftto&lt;br&gt;- boite_optique&lt;br&gt;- zapbo&lt;br&gt;- zasro&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string>Calcul boite_optique</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="calculcableBouton">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Couches nécessaires : &lt;br&gt;- boite_optique&lt;br&gt;- cable_optique&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string>Calcul cable_optique</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPlainTextEdit" name="logsTextEdit">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>80</y>
+     <width>281</width>
+     <height>341</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>430</y>
+     <width>281</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <item>
+     <widget class="QPushButton" name="supprimerLogsBouton">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>Supprimer les logs</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="copierLogsBouton">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>Copier les logs</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>sroLineEdit</tabstop>
+  <tabstop>calculBoiteBouton</tabstop>
+  <tabstop>calculcableBouton</tabstop>
+  <tabstop>copierLogsBouton</tabstop>
+  <tabstop>supprimerLogsBouton</tabstop>
+  <tabstop>logsTextEdit</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>calculBoiteBouton</sender>
+   <signal>clicked()</signal>
+   <receiver>CalculsSIO</receiver>
+   <slot>calculBoite()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>29</x>
+     <y>52</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>7</x>
+     <y>28</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>calculcableBouton</sender>
+   <signal>clicked()</signal>
+   <receiver>CalculsSIO</receiver>
+   <slot>calculCable()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>259</x>
+     <y>45</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>292</x>
+     <y>35</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>copierLogsBouton</sender>
+   <signal>clicked()</signal>
+   <receiver>CalculsSIO</receiver>
+   <slot>copierLogs()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>163</x>
+     <y>445</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>3</x>
+     <y>427</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>supprimerLogsBouton</sender>
+   <signal>clicked()</signal>
+   <receiver>CalculsSIO</receiver>
+   <slot>supprimerLogs()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>74</x>
+     <y>436</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>271</x>
+     <y>424</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>calculBoite()</slot>
+  <slot>calculCable()</slot>
+  <slot>copierLogs()</slot>
+  <slot>supprimerLogs()</slot>
+ </slots>
+</ui>
